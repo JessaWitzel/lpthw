@@ -1,0 +1,6 @@
+Things I want to look up:
+
+.strip()
+.encode()
+errors=errors? Is this just setting a variable?
+.decode()

@@ -44,3 +44,5 @@ list.remove(), "removes the first item from the list with a specific value. Erro
 list.pop(), "remove the item at a specific position in list and return it. Default last item in list."
 list.clear(), "removes all items from list"
 list.count(), "return number of times item appears in list"
+ordinal numbers, "indicate an ordering of things, first second third"
+cardinal numbers, "based on an index or list, 1 less than the ordinal number"

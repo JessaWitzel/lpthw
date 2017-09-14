@@ -32,13 +32,28 @@ def vocab(txtfile):
         else:
             print("Great job! We won't test you on that again.")
 
+def definitions(txtfile):
+    #copy vocab file but call the definition first and then the keys
+    while keys:
+        current = keys.pop()
+        print(f"Please give us the vocab word that matches this definitions: {txtfile[current]}")
+        whatever = input("> ")
+        print(f"The correct vocab word is: {current}")
+        print("Did you answer correctly?")
+        response = input("> ")
+        if response == "no":
+            print("That's too bad! We will retest you on this later.")
+            keys.insert(0, current)
+            print(keys)
+        else:
+            print("Great job! We won't test you on that again.")
 
 def begin(choice):
     if choice == "vocab":
         print("Let's do this")
         vocab(txtfile)
     elif choice == "definitions":
-        definitions(x)
+        definitions(txtfile)
     elif "mixture" in choice:
         mixture(x)
     else:

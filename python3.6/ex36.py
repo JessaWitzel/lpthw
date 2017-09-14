@@ -23,7 +23,7 @@ def vocab(txtfile):
         print("Here is the definition we have on file:")
         print(txtfile[current])
         print("Did you answer correctly?")
-    #if yes, move to next one, if no .amend back onto the list.
+    #if yes, move to next one, if no .insert in beginning of list.
         response = input("> ")
         if response == "no":
             print("That's too bad! We will retest you on this later.")

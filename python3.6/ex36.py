@@ -10,20 +10,24 @@ print("""Welcome to the vocab game!
 choice = input("> ")
 txtfile = {"word": "definition", "vocab": "iscool", "jessa": "isawesome"}
 keys = list(txtfile.keys())
-#randomize list of keys
 random.shuffle(keys)
-print(keys)
 
 def vocab(txtfile):
-    print("You got it.")
+    print(keys)
     #pop off tuple into a variable
+    current = keys.pop()
+    print(f"Your vocab word is {current}.")
     #give the vocab word and request input for the definition
+    whatever = input("Please type your definition: ")
     #show the definition and asked if it matched
+    print("Here is the definition we have on file:")
+    print(txtfile[current])
+    print("Did you answer correctly?")
     #if yes, move to next one, if no .amend back onto the list.
+    response = input("> ")
 
 def begin(choice):
     if choice == "vocab":
-        x = "Hello"
         print("Let's do this")
         vocab(txtfile)
     elif choice == "definitions":

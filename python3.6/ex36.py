@@ -48,6 +48,8 @@ def vocab(txtfile):
             #print(keys)
         #else:
             #print("Great job! We won't test you on that again.")
+        guess_vocab(txtfile, current)
+        correct_or_naw(current)
 
 def definitions(txtfile):
     while keys:

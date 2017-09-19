@@ -54,10 +54,10 @@ def convert(snippet, phrase):
         param_names.append(', '.join(
             random.sample(WORDS, param_count)))
 
-    #for loop "if sentence is in snippet or phrase"
+    #for loop that loops twice. Treats snippet, phrase as it's own list.
     for sentence in snippet, phrase:
         #this is how you duplicate a list or string *not working
-        result = sentence.copy()
+        result = sentence
 
         #fake class names
         for word in class_names:

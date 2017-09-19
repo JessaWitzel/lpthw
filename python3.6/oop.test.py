@@ -35,21 +35,28 @@ ctx.verify_mode = ssl.CERT_NONE
 #load up the words from the website
 for word in urlopen(WORD_URL, context=ctx).readlines():
     WORDS.append(str(word.strip(), encoding = "utf-8"))
-
+#function that takes 2 arguments
 def convert(snippet, phrase):
+    #variable assigned to capitalizing each word in WORDS
     class_names = [w.capitalize() for w in
                     random.sample(WORDS, snippet.count("%%%"))]
+    #variable assigned to random words
     other_names = random.sample(WORDS, snippet.count("***"))
+    #open lists
     results = []
     param_names = []
 
+    #for loop defined as 0 to # of snippets minus one
     for i in range(0, snippet.count("@@@")):
+        #variable set as random integer 1 or 2
         param_count = random.randint(1,3)
+        #appends param_names list with comman and string that joins one or two words together
         param_names.append(', '.join(
             random.sample(WORDS, param_count)))
 
+    #for loop "if sentence is in snippet or phrase"
     for sentence in snippet, phrase:
-        #this is how you duplicate a list or string
+        #this is how you duplicate a list or string *not working
         result = sentence.copy()
 
         #fake class names
@@ -64,6 +71,7 @@ def convert(snippet, phrase):
         for word in param_names:
             result = result.replace("@@@", word, 1)
 
+        #append result onto results list
         results.append(result)
 
     return results

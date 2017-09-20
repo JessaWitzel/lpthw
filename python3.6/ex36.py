@@ -20,9 +20,10 @@ def guess_vocab(txtfile, current):
     print("Did you answer correctly?")
 
 def guess_definitions(txtfile, current):
-    print(f"Please give us the vocab word that matches this definitions: {txtfile[current]}")
-    whatever = input("> ")
+    print(f"Please give us the vocab word that matches this definition: {txtfile[current]}")
+    input("> ")
     print(f"The correct vocab word is: {current}")
+    print("Did you answer correctly?")
 
 def correct_or_naw(current):
     response = input("> ")
@@ -47,10 +48,14 @@ def definitions(txtfile):
         correct_or_naw(current)
 
 def mixture(txtfile):
-    #I want to be able to call the vocab and definitions function inside of this function
-    #separate the call and response and input from the while loop in the functions?
-    #then call that within each function?
-    print("example text")
+    while keys:
+        current = keys.pop()
+        guess_vocab(txtfile, current)
+        correct_or_naw(current)
+        if keys:
+            current = keys.pop()
+            guess_definitions(txtfile, current)
+            correct_or_naw(current)
 
 def begin(choice):
     if choice == "vocab":
@@ -59,7 +64,7 @@ def begin(choice):
     elif choice == "definitions":
         definitions(txtfile)
     elif "mixture" in choice:
-        mixture(x)
+        mixture(txtfile)
     else:
         print("Please type 'vocab', 'definitions', or 'mixture'")
         choice = input("> ")

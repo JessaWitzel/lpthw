@@ -71,3 +71,5 @@ def begin(choice):
         begin(choice)
 
 begin(choice)
+
+#next, make it work with a comma separated txt file! How do I do that?

@@ -1,6 +1,7 @@
 ##Animal is-a object
 class Animal(object):
-    pass
+    #when is this being called? Why is it being called???
+    print('i am... an ANimal')
 
 #Dog is-a Animal
 class Dog(Animal):
@@ -8,6 +9,7 @@ class Dog(Animal):
     def __init__(self, name):
         #Associates paramater name with this instance of Dog
         self.name = name
+    print("Dogs go 'bark'")
 
 #Cat is-a Animal
 class Cat(Animal):

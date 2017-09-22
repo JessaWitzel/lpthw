@@ -80,3 +80,5 @@ class X(object): def M(self, J), "class X has-a function named M that takes self
 foo - X(), "Set foo to an instance of class X"
 foo.M(J), "From foo, get the M function, and call it with parameters self, J"
 foo.K = Q, "From foo, get the K attribute, and set it to Q"
+octothorpe, "# comments out a line"
+modulus, "%, used only in division. Returns remainder of the division"

@@ -1,5 +1,3 @@
-#beginner's python vocab
-
 floating point number, 4.0
 round(), round a number
 string, a immutable sequence of characters

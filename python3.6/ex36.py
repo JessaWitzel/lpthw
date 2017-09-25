@@ -1,6 +1,20 @@
 #I don't want to write a game because I'm not that into video games.
 #input text file as a command line argument
 import random
+vocab = {}
+
+def create_vocab_dict():
+    vocabtxt = open("examplevocab.txt")
+    nextvocab = vocabtxt.readline().strip("\n")
+    while nextvocab != "":
+        #strip newline out of it
+
+        key, value = nextvocab.split(", ", 1)
+        vocab[key] = value
+        print(vocab)
+        nextvocab = vocabtxt.readline().strip("\n")
+
+create_vocab_dict()
 
 print("""Welcome to the vocab game!
     Would you like to be shown the vocab,
